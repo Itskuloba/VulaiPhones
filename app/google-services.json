@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771946985771",
+    "project_id": "vulaiphones",
+    "storage_bucket": "vulaiphones.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771946985771:android:51b2537a0cb57303c86d6e",
+        "android_client_info": {
+          "package_name": "com.example.vulaiphones"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR3DzCU_bR6o0gfYYus5LiaZRtrAf0hxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
