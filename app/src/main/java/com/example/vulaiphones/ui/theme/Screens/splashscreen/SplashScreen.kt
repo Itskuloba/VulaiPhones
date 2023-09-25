@@ -24,18 +24,18 @@ fun SplashScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.phonescreen), // Replace with your image resource ID
-            contentDescription = null, // Provide a description if needed
+            painter = painterResource(id = R.drawable.testpic1),
+            contentDescription = null,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp), // Adjust padding as needed
+                .padding(16.dp),
             contentScale = ContentScale.Crop
         )
     }
 
-    // Navigate to the next screen after a delay (e.g., 2 seconds)
     LaunchedEffect(key1 = true) {
-        kotlinx.coroutines.delay(2000) // 2000 milliseconds = 2 seconds
-        navController.navigate(ROUTE_PRODUCT) // Replace "main_screen" with your destination route
+        kotlinx.coroutines.delay(3000) // 2000 milliseconds = 2 seconds
+        navController.navigate(ROUTE_PRODUCT)
     }
 }
+

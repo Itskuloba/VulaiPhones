@@ -62,40 +62,20 @@ class MainActivity : ComponentActivity() {
                     LoginScreen1(rememberNavController())
                     AppNavHost()
                 }
-                // on the below line we are specifying
-                // the theme as the scaffold.
                 Scaffold(
-                    // in scaffold we are
-                    // specifying the top bar.
                     topBar = {
-                        // inside top bar we are
-                        // specifying background color.
                         TopAppBar(
-                            // along with that we are specifying
-                            // title for our top bar.
                             title = {
-                                // in the top bar we are
-                                // specifying title as a text
                                 Text(
-                                    // on below line we are specifying
-                                    // text to display in top app bar
                                     text = "GFG",
-                                    // on below line we are specifying
-                                    // modifier to fill max width
                                     modifier = Modifier.fillMaxWidth(),
-                                    // on below line we are
-                                    // specifying text alignment
                                     textAlign = TextAlign.Center,
-                                    // on below line we are specifying
-                                    // color for our text.
                                     color = Color.White
                                 )
                             })
                     })
                 {
 
-                    // on below line we are calling
-                    // method to display UI
 //                    com.example.vulaiphones.ui.theme.Screens.firebasUI(LocalContext.current)
                 }
 
@@ -197,4 +177,6 @@ fun FirebasUI(context: Context) {
         )
     }
 }
+
+
 

@@ -3,17 +3,14 @@ package com.example.vulaiphones.data
 import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
+import com.example.vulaiphones.models.Order
+import com.example.vulaiphones.models.Product
 import com.example.vulaiphones.models.User
 import com.example.vulaiphones.navigation.ROUTE_HOME
 import com.example.vulaiphones.navigation.ROUTE_LOGIN
-import com.example.vulaiphones.ui.theme.Screens.splashscreen.SplashScreen
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
@@ -80,19 +77,69 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
         }
     }
 
-    @OptIn(ExperimentalComposeUiApi::class)
-    @Composable
-    fun AppNavigation() {
-        val navController = rememberNavController()
+//    fun Checkout(name:String,email: String,cardNumber: Number,expirationDate:Number,cvv:Number){
+//        progress.show()
+//        mAuth.checkout(name,email,cardNumber,expirationDate,cvv).add
+//
+//    }
 
-        // Set up your navigation graph
-        NavHost(navController = navController, startDestination = "splash_screen") {
-            composable("splash_screen") {
-                SplashScreen(navController)
-            }
-            composable("main_screen") {
-                // Your main content composable
+    fun checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number) {
+        progress.show()
+
+        val name = name
+        val cardNumber = cardNumber
+        val expirationDate = expirationDate
+        val cvv = cvv
+
+        if (name.isBlank() || cardNumber==null || expirationDate==null || cvv==null) {
+            progress.dismiss()
+            Toast.makeText(context, "Please fill in all payment details", Toast.LENGTH_LONG).show()
+            return
+        } else {
+            // Perform payment processing logic here
+            // For example, you can use Firebase to store the order information
+
+
+            // Assuming you have a Firebase reference (e.g., "orderRef") to store order data
+
+            val orderData = Order(product)
+            val orderRef = FirebaseDatabase.getInstance().getReference("orders")
+            orderRef.setValue(orderData).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(context, "Order placed successfully", Toast.LENGTH_LONG).show()
+                    // Handle navigation or other actions after successful order placement
+                } else {
+                    Toast.makeText(context, "${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    // Handle errors during order placement
+                }
+                progress.dismiss()
             }
         }
     }
+
+    private fun Order(product: Product): Any? {
+        TODO("Not yet implemented")
+    }
+
+
+    fun saveOrder(order: Order) {
+        val database = FirebaseDatabase.getInstance()
+        val ordersRef: DatabaseReference = database.getReference("orders")
+
+        // Generate a unique key for the order
+        val orderKey = ordersRef.push().key ?: ""
+
+        // Set the order data in the database
+        ordersRef.child(orderKey).setValue(order)
+            .addOnSuccessListener {
+                // Order saved successfully
+                println("Order saved successfully")
+            }
+            .addOnFailureListener {
+                // Error occurred while saving the order
+                println("Error saving order: ${it.message}")
+            }
+    }
+
+
 }

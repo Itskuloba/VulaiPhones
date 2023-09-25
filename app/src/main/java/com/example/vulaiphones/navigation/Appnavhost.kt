@@ -6,8 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.vulaiphones.ui.theme.Screens.checkout.CheckoutScreen
 import com.example.vulaiphones.ui.theme.Screens.home.HomeScreen
 import com.example.vulaiphones.ui.theme.Screens.login.LoginScreen1
+import com.example.vulaiphones.ui.theme.Screens.products.ECommerceScreen
 import com.example.vulaiphones.ui.theme.Screens.products.ProductScreen
 import com.example.vulaiphones.ui.theme.Screens.register.RegisterScreen2
 import com.example.vulaiphones.ui.theme.Screens.splashscreen.SplashScreen
@@ -31,6 +33,12 @@ fun AppNavHost(modifier: Modifier=Modifier,navController:NavHostController= reme
         }
         composable(ROUTE_PRODUCT){
             ProductScreen(navController)
+        }
+        composable(ROUTE_PRODUCTLISTING){
+            ECommerceScreen(navController)
+        }
+        composable(ROUTE_CHECKOUT){
+            CheckoutScreen(navController)
         }
 
 

@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.vulaiphones.R
+import com.example.vulaiphones.navigation.ROUTE_CHECKOUT
 import com.example.vulaiphones.navigation.ROUTE_LOGIN
 import com.example.vulaiphones.ui.theme.VulaiPhonesTheme
 
@@ -168,9 +169,157 @@ fun ProductScreen(navController:NavHostController) {
                     modifier = Modifier.padding(top = 8.dp)
                 )
             }
+            item {
+                Button(
+                    onClick = {
+                        // Handle Add to Cart button click
+
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp)
+                ) {
+                    Text(text = "Check out")
+                }
+            }
+        }
+    }
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        item {
+            Image(
+                painter = painterResource(id = R.drawable.testpic1),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .clip(MaterialTheme.shapes.medium)
+            )
+        }
+
+        item {
+            Text(
+                text = "Product Name",
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier.padding(top = 16.dp)
+            )
+        }
+
+        item {
+            Text(
+                text = "Price: $19.99",
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier.padding(top = 8.dp)
+            )
+        }
+
+        item {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = "Quantity:",
+                    style = MaterialTheme.typography.bodySmall,
+                )
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                OutlinedTextField(
+                    value = quantity.toString(),
+                    onValueChange = {
+                        quantity = it.toIntOrNull() ?: 1
+                    },
+                    keyboardActions = KeyboardActions(
+                        onDone = {
+                            // Handle keyboard done action
+                        }
+                    ),
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Number,
+                        imeAction = ImeAction.Done
+                    ),
+                    modifier = Modifier
+                        .width(50.dp)
+                        .padding(end = 8.dp)
+                )
+
+                Button(
+                    onClick = {
+                        if (quantity > 1) {
+                            quantity--
+                        }
+                    },
+                    modifier = Modifier.size(30.dp),
+                ) {
+                    Text("-")
+                }
+
+                Button(
+                    onClick = {
+                        quantity++
+                    },
+                    modifier = Modifier.size(30.dp),
+                ) {
+                    Text("+")
+                }
+            }
+        }
+
+        item {
+            Button(
+                onClick = {
+                    // Handle Add to Cart button click
+                    navController.navigate(ROUTE_LOGIN)
+
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp)
+            ) {
+                Text(text = "Add to Cart")
+            }
+        }
+
+        item {
+            Text(
+                text = "Product Description",
+                style = MaterialTheme.typography.labelSmall,
+                modifier = Modifier.padding(top = 16.dp)
+            )
+        }
+
+        item {
+            Text(
+                text = "This is a sample product description. Replace this with the actual product description.",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(top = 8.dp)
+            )
+        }
+        item {
+            Button(
+                onClick = {
+                    // Handle Add to Cart button click
+                    navController.navigate(ROUTE_CHECKOUT)
+
+
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp)
+            ) {
+                Text(text = "Check out")
+            }
         }
     }
 }
+
 
 @Preview
 @Composable
