@@ -128,27 +128,7 @@ fun ShoppingApp(navController: NavHostController) {
 
 
 
-//        LazyColumn {
-//            items(filteredItems) { item ->
-//                CartItemRow(
-//                    item = item,
-//                    onQuantityChange = { newQuantity ->
-//                        item.quantity = newQuantity
-//
-//                    },
-//                    onRemoveItemClick = {
-////                        cartItems.remove(item)
-//                        // Create a new list without the item to remove
-//                        val updatedCartItems = cartItems.toMutableList()
-//                        updatedCartItems.removeAt(item)
-//
-//                        // Update cartItems with the new list
-//                        cartItems = updatedCartItems
-//
-//                    }
-//                )
-//            }
-//        }
+
 
     }
 }
