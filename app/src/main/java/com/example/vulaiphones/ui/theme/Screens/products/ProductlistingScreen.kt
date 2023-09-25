@@ -27,6 +27,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.vulaiphones.R
 import com.example.vulaiphones.models.Product
+import com.example.vulaiphones.navigation.ROUTE_CHECKOUT
 import com.example.vulaiphones.ui.theme.VulaiPhonesTheme
 
 @Composable
@@ -45,20 +46,7 @@ fun ProductGrid(products: List<Product>,navController: NavHostController) {
         }
     }
 }
-//@Composable
-//fun ProductGrid(products: List<Product>, navController: NavHostController) {
-//    LazyVerticalGrid(
-//        columns = GridCells.Fixed(2),
-//        modifier = Modifier.fillMaxHeight().background(Color.White),
-//        horizontalArrangement = Arrangement.spacedBy(8.dp),
-//        verticalArrangement = Arrangement.spacedBy(8.dp)
-//    ) {
-//        items(products.size) { index ->
-//            val product = products[index]
-//            ProductCard(product, navController)
-//        }
-//    }
-//}
+
 
 @Composable
 fun ProductCard(product: Product, navController: NavHostController) {
@@ -82,10 +70,9 @@ fun ProductCard(product: Product, navController: NavHostController) {
             Text(text = product.description)
 
             ClickableTextButton(
-                text = "Add to Cart", // You can customize the button text
+                text = "Add to Cart",
                 onClick = {
-                    // Navigate to the checkout page when the button is clicked
-                    navController.navigate("checkout") // Replace "checkout" with the actual destination
+                    navController.navigate(ROUTE_CHECKOUT)
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -105,10 +92,18 @@ fun ClickableTextButton(text: String, onClick: () -> Unit, modifier: Modifier) {
 fun ECommerceScreen(navController: NavHostController) {
     val products = remember {
         listOf(
-            Product("One", "Product 1", "$10.99", R.drawable.testpic1),
-            Product("Two", "Product 2", "$19.99", R.drawable.testpic1),
-            Product("Two", "Product 2", "$19.99", R.drawable.testpic1),
-            Product("Two", "Product 2", "$19.99", R.drawable.testpic1),
+            Product("iphone 15", "Product 1", "$999", R.drawable.testpic5),
+            Product("iphone 15 plus", "Product 1", "$1099", R.drawable.testpic4),
+            Product("iphone 15 pro", "Product 1", "$1199", R.drawable.testpic1),
+            Product("iphone 15 pro max", "Product 1", "$1299", R.drawable.testpic2),
+            Product("iphone 14", "Product 1", "$799", R.drawable.testpic6),
+            Product("iphone 14 plus", "Product 1", "$899", R.drawable.testpic7),
+            Product("iphone 14 pro", "Product 1", "$999", R.drawable.testpic8),
+            Product("iphone 14 pro max", "Product 1", "$1099", R.drawable.testpic9),
+            Product("iphone 13 mini", "Product 1", "$699", R.drawable.testpic13),
+            Product("iphone 13", "Product 2", "$799", R.drawable.testpic12),
+            Product("iphone 13 pro", "Product 2", "$899", R.drawable.testpic11),
+            Product("iphone 13 pro max", "Product 2", "$999", R.drawable.testpic14),
 
 
 
@@ -138,7 +133,7 @@ fun ECommerceScreen(navController: NavHostController) {
 }
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun Productview() {
     VulaiPhonesTheme {
