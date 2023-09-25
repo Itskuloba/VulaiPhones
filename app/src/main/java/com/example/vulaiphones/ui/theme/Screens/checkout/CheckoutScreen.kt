@@ -56,22 +56,6 @@ fun CheckoutScreen(navController: NavHostController) {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
-//        BasicTextField(
-//            value = name,
-//            onValueChange = {
-//                var it = ""
-//                name = it
-//            },
-//
-//
-////            label={ Text(text = "Name")},
-//
-////            placeholder = { Text("Name") },
-//
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .padding(bottom = 8.dp)
-//        )
         TextField(
             value = name,
             onValueChange ={
@@ -84,17 +68,7 @@ fun CheckoutScreen(navController: NavHostController) {
                 .padding(bottom = 8.dp)
             )
 
-//        BasicTextField(
-//            value = email,
-//            onValueChange = {
-//                var it = ""
-//                email = it
-//            },
-////            placeholder = { Text("Email") },
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .padding(bottom = 16.dp)
-//        )
+
         TextField(
             value = email,
             onValueChange ={
