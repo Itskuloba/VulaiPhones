@@ -11,8 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.vulaiphones.R
 import com.example.vulaiphones.navigation.ROUTE_PRODUCT
 
@@ -24,7 +26,7 @@ fun SplashScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.testpic1),
+            painter = painterResource(id = R.drawable.spscreen),
             contentDescription = null,
             modifier = Modifier
                 .fillMaxSize()
@@ -37,5 +39,11 @@ fun SplashScreen(navController: NavController) {
         kotlinx.coroutines.delay(3000) // 2000 milliseconds = 2 seconds
         navController.navigate(ROUTE_PRODUCT)
     }
+}
+@Preview
+@Composable
+fun SplashScreen() {
+    SplashScreen(rememberNavController())
+
 }
 

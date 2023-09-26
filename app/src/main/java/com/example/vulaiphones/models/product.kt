@@ -2,11 +2,15 @@ package com.example.vulaiphones.models
 
 
 class Product {
+
+
     var name:String=""
     var quantity:String=""
     var price:String=""
     var id:String=""
     var description:String=""
+    val imageResourceId: Int = 0 // Add this property to store the image resource ID
+
 
     constructor(name: String, quantity:String, price:String, id: Int){
         this.name=name
@@ -25,25 +29,8 @@ class Product {
      val totalPrice: Double,
      val customerName: String,
      val Email: String,
-     val Name: String
-    // Add other order details as needed
+     val Name: String,
+     val imageResourceId: Int=0 // Add this property to store the image resource ID
+
+     // Add other order details as needed
 )
-
-
-//fun Order(
-//    product: Product,
-//    quantity: Int,
-//    Name: String,
-//    Email: String
-//): Order {
-//    val totalPrice = product.price.toDouble() * quantity.toDouble()
-//    return Order(
-//        productId = product.id,
-//        productName = product.name,
-//        quantity = quantity,
-//        totalPrice = totalPrice,
-//        Name = Name,
-//        Email = Email
-//        // Add other order details as needed
-//    )
-//}

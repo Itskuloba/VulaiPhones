@@ -21,16 +21,28 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.vulaiphones.data.AuthViewModel
+import com.example.vulaiphones.models.Product
 import com.example.vulaiphones.navigation.ROUTE_PRODUCT
 import com.example.vulaiphones.ui.theme.VulaiPhonesTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CheckoutScreen(navController: NavHostController) {
+fun CheckoutScreen(
+    navController: NavHostController,
+) {
+    val viewModel: ViewModel = viewModel() // Initialize your ViewModel instance outside of the composable function
+    val context = LocalContext.current // Use LocalContext to get the current context
+
+    // Create a sample Product instance
+    val product = Product(/* Initialize your product data here */)
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var cardNumber by remember { mutableStateOf("") }
@@ -56,26 +68,23 @@ fun CheckoutScreen(navController: NavHostController) {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
+
         TextField(
             value = name,
-            onValueChange ={
-                var it=""
-                name=it
-            },
-            placeholder = { Text(text = ("Name"))},
+            onValueChange = { it -> name = it }, // Update name variable
+            placeholder = { Text("Name") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 8.dp)
-            )
+        )
+
+
 
 
         TextField(
             value = email,
-            onValueChange ={
-                var it=""
-                name=it
-            },
-            placeholder = { Text(text = ("Email"))},
+            onValueChange = { it -> email = it }, // Update email variable
+            placeholder = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 8.dp)
@@ -88,11 +97,10 @@ fun CheckoutScreen(navController: NavHostController) {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
+
         TextField(
             value = cardNumber,
-            onValueChange = {
-                var it = ""
-                cardNumber = it },
+            onValueChange = { it -> cardNumber = it }, // Update email variable
             placeholder = { Text("Card Number") },
             modifier = Modifier
                 .fillMaxWidth()
@@ -105,46 +113,60 @@ fun CheckoutScreen(navController: NavHostController) {
         ) {
             TextField(
                 value = expirationDate,
-                onValueChange = {
-                    var it = ""
-                    expirationDate = it
-                },
+                onValueChange = { it -> expirationDate = it }, // Update email variable
                 placeholder = { Text("MM/YY") },
                 modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 8.dp)
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp)
             )
 
             TextField(
                 value = cvv,
-                onValueChange = {
-                    var it = ""
-                    cvv = it
-                },
+                onValueChange = { it -> cvv = it }, // Update email variable
                 placeholder = { Text("CVV") },
                 modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 8.dp)
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp)
             )
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
         // Order Confirmation Button
+
         Button(
             onClick = {
+                val myCheckout = AuthViewModel(navController, context)
+
 
                 // Handle order confirmation logic here
             },
             modifier = Modifier
                 .fillMaxWidth()
         ) {
-            Text(text = "Confirm Order")
+            Text(text = "Check out")
         }
 
         Button(
             onClick = {
-                navController.navigate(ROUTE_PRODUCT)
+
+                val mysaveOrder= AuthViewModel(navController, context)
+                val order = null
+                order?.let { mysaveOrder.saveOrder(it) }
+
+
+                // Handle order confirmation logic here
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Text(text = "Save Order")
+        }
+
+        Button(
+            onClick = {
+//                navController.navigate(ROUTE_PRODUCT)
+                      navController.navigate(ROUTE_PRODUCT)
 
                 // Handle order confirmation logic here
             },

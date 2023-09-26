@@ -69,7 +69,6 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
             if (it.isSuccessful) {
                 Toast.makeText(context, "Successfully logged in", Toast.LENGTH_LONG).show()
                 navController.navigate(ROUTE_HOME)
-//                navController.navigate(ROUTE_REGISTER)TO TAKE YOU TO A DIFFERENT PAGE
             } else {
                 Toast.makeText(context, "${it.exception!!.message}", Toast.LENGTH_LONG).show()
                 navController.navigate(ROUTE_LOGIN)
@@ -77,11 +76,6 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
         }
     }
 
-//    fun Checkout(name:String,email: String,cardNumber: Number,expirationDate:Number,cvv:Number){
-//        progress.show()
-//        mAuth.checkout(name,email,cardNumber,expirationDate,cvv).add
-//
-//    }
 
     fun checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number) {
         progress.show()
@@ -140,6 +134,7 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
                 println("Error saving order: ${it.message}")
             }
     }
+
 
 
 }
