@@ -113,9 +113,12 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
 //    }
 
     private fun createOrder(product: Product): Any? {
-        // Create an instance of the Order class using the provided Product
-        // You need to replace the following line with the actual logic to create an Order
-        return Order(product) // Replace this line with your logic
+
+//        val order = Order()
+//        order.productId = product.productId
+//        order.productName = product.productName
+
+        return product // Replace this line with your logic
     }
     fun checkout(product: Product, name: String, cardNumber: Number, expirationDate: Number, cvv: Number) {
         progress.show()
@@ -155,9 +158,10 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
     }
 
 
-    private fun Order(product: Product): Any? {
-        TODO("Not yet implemented")
-    }
+//    private fun Order(product: Product): Any? {
+//        return Order(product)
+////        TODO("Not yet implemented")
+//    }
 
 
     fun saveOrder(order: Order) {

@@ -11,12 +11,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.vulaiphones.R
@@ -124,7 +128,11 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.Black,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
@@ -133,7 +141,12 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.Black,
+                            style = TextStyle(fontSize = 20.sp),
+                            fontWeight = FontWeight.Bold,
+                            )
                     }
                 }
             }
