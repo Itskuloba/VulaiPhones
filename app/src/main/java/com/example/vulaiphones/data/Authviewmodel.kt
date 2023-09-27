@@ -3,6 +3,7 @@ package com.example.vulaiphones.data
 import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavHostController
 import com.example.vulaiphones.models.Order
 import com.example.vulaiphones.models.Product
@@ -77,15 +78,54 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
     }
 
 
-    fun checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number) {
+//    fun checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number) {
+//        progress.show()
+//
+//        val name = name
+//        val cardNumber = cardNumber
+//        val expirationDate = expirationDate
+//        val cvv = cvv
+//
+//        if (name.isBlank() || cardNumber==null || expirationDate==null || cvv==null) {
+//            progress.dismiss()
+//            Toast.makeText(context, "Please fill in all payment details", Toast.LENGTH_LONG).show()
+//            return
+//        } else {
+//            // Perform payment processing logic here
+//            // For example, you can use Firebase to store the order information
+//
+//
+//            // Assuming you have a Firebase reference (e.g., "orderRef") to store order data
+//
+//            val orderData = Order(product)
+//            val orderRef = FirebaseDatabase.getInstance().getReference("orders")
+//            orderRef.setValue(orderData).addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    Toast.makeText(context, "Order placed successfully", Toast.LENGTH_LONG).show()
+//                    // Handle navigation or other actions after successful order placement
+//                } else {
+//                    Toast.makeText(context, "${task.exception?.message}", Toast.LENGTH_LONG).show()
+//                    // Handle errors during order placement
+//                }
+//                progress.dismiss()
+//            }
+//        }
+//    }
+
+    private fun createOrder(product: Product): Any? {
+        // Create an instance of the Order class using the provided Product
+        // You need to replace the following line with the actual logic to create an Order
+        return Order(product) // Replace this line with your logic
+    }
+    fun checkout(product: Product, name: String, cardNumber: Number, expirationDate: Number, cvv: Number) {
         progress.show()
 
-        val name = name
-        val cardNumber = cardNumber
-        val expirationDate = expirationDate
-        val cvv = cvv
+        // Convert Number types to Long, assuming they are Longs
+        val cardNumberLong = cardNumber.toLong()
+        val expirationDateLong = expirationDate.toLong()
+        val cvvLong = cvv.toLong()
 
-        if (name.isBlank() || cardNumber==null || expirationDate==null || cvv==null) {
+        if (name.isBlank() || cardNumberLong <= 0 || expirationDateLong <= 0 || cvvLong <= 0) {
             progress.dismiss()
             Toast.makeText(context, "Please fill in all payment details", Toast.LENGTH_LONG).show()
             return
@@ -93,12 +133,15 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
             // Perform payment processing logic here
             // For example, you can use Firebase to store the order information
 
-
             // Assuming you have a Firebase reference (e.g., "orderRef") to store order data
-
-            val orderData = Order(product)
+            val orderData = createOrder(product)
+//            val orderData = Order(product)
             val orderRef = FirebaseDatabase.getInstance().getReference("orders")
-            orderRef.setValue(orderData).addOnCompleteListener { task ->
+
+            // Push the order data to generate a unique key for each order
+            val orderKey = orderRef.push().key ?: ""
+
+            orderRef.child(orderKey).setValue(orderData).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(context, "Order placed successfully", Toast.LENGTH_LONG).show()
                     // Handle navigation or other actions after successful order placement
@@ -110,6 +153,7 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
             }
         }
     }
+
 
     private fun Order(product: Product): Any? {
         TODO("Not yet implemented")
@@ -137,4 +181,9 @@ class AuthViewModel (var navController:NavHostController,var context:Context) {
 
 
 
+}
+
+class MyViewModel : ViewModel() {
+
+    // Your ViewModel logic goes here
 }

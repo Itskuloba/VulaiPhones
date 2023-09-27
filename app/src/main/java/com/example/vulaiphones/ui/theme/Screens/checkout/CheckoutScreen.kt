@@ -24,8 +24,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.vulaiphones.data.AuthViewModel
@@ -38,7 +36,8 @@ import com.example.vulaiphones.ui.theme.VulaiPhonesTheme
 fun CheckoutScreen(
     navController: NavHostController,
 ) {
-    val viewModel: ViewModel = viewModel() // Initialize your ViewModel instance outside of the composable function
+//    val viewModel: ViewModel = viewModel() // Initialize your ViewModel instance outside of the composable function
+
     val context = LocalContext.current // Use LocalContext to get the current context
 
     // Create a sample Product instance
@@ -134,9 +133,18 @@ fun CheckoutScreen(
 
         // Order Confirmation Button
 
+        val myCheckout = AuthViewModel(navController, context)
+
         Button(
             onClick = {
-                val myCheckout = AuthViewModel(navController, context)
+                val product = Product()
+//                val myCheckout = MyCheckout()
+//                myCheckout.checkout(product, "John Doe", 1234567890123456L, 20250101L, 123)
+//                val myCheckout = AuthViewModel(navController, context)
+                myCheckout.checkout(product, "John Doe", 1234567890123456L, 20250101L, 123)
+
+//                myCheckout.checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number)
+//                myCheckout.checkout(product)
 
 
                 // Handle order confirmation logic here
@@ -163,11 +171,10 @@ fun CheckoutScreen(
             Text(text = "Save Order")
         }
 
+
         Button(
             onClick = {
-//                navController.navigate(ROUTE_PRODUCT)
-                      navController.navigate(ROUTE_PRODUCT)
-
+                navController.navigate(ROUTE_PRODUCT)
                 // Handle order confirmation logic here
             },
             modifier = Modifier

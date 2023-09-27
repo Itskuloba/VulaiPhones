@@ -31,24 +31,24 @@ fun ProductScreen(navController:NavHostController) {
     var quantity by remember { mutableStateOf(1) }
 
     Scaffold(
-//        topBar = {
-//            TopAppBar(
-//                title = {
-//                    Text(text = "Product Page")
-//                },
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "Product Page")
+                },
 //                navigationIcon = {
 //                    IconButton(
 //                        onClick = { /* Handle navigation icon click */ }
 //                    ) {
 //                        Icon(
-//                            painter = painterResource(id = R.drawable.testpic1),
+//                            painter = painterResource(id = R.drawable.i15),
 //                            contentDescription = null
 //                        )
 //
 //                    }
 //                },
-//            )
-//        }
+            )
+        }
     ) {
         LazyColumn(
             modifier = Modifier
@@ -57,7 +57,7 @@ fun ProductScreen(navController:NavHostController) {
         ) {
             item {
                 Image(
-                    painter = painterResource(id = R.drawable.i15),
+                    painter = painterResource(id = R.drawable.i152),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -155,7 +155,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About it",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -164,56 +164,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2023, September 12\n" +
-                            "Status\tAvailable. Released 2023, September 22\n" +
-                            "BODY\tDimensions\t146.6 x 70.6 x 8.3 mm (5.77 x 2.78 x 0.33 in)\n" +
-                            "Weight\t187 g (6.60 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), titanium frame (grade 5)\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tLTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)\n" +
-                            "Size\t6.1 inches, 91.3 cm2 (~88.2% screen-to-body ratio)\n" +
-                            "Resolution\t1179 x 2556 pixels, 19.5:9 ratio (~461 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            " \tAlways-On display\n" +
-                            "PLATFORM\tOS\tiOS 17\n" +
-                            "Chipset\tApple A17 Pro (3 nm)\n" +
-                            "CPU\tHexa-core (2x3.78 GHz + 4x2.11 GHz)\n" +
-                            "GPU\tApple GPU (6-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 8GB RAM, 256GB 8GB RAM, 512GB 8GB RAM, 1TB 8GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), 1.0µm, PDAF, OIS, 3x optical zoom\n" +
-                            "12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55\", 1.4µm, dual pixel PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), 3D (spatial) video, stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@24/30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6e, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS (L1+L5), GLONASS, GALILEO, BDS, QZSS, NavIC\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tUSB Type-C 3.0, DisplayPort\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband 2 (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 3274 mAh, non-removable\n" +
-                            "Charging\tWired, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)\n" +
-                            "Reverse wired",
+                    "6.1-inch durable color-infused glass and aluminum design footnote ◊ with Ceramic Shield front." +
+                            "Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else." +
+                            "48MP Main camera with 2x Telephoto captures breathtaking detail up close or far away." +
+                            "A16 Bionic powers computational photography and smooth gaming performance with great efficiency for all-day battery life." +
+                            "Connect and charge with USB-C.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -318,7 +273,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About product",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -326,7 +281,11 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "This is a sample product description. Replace this with the actual product description.",
+                    text = "6.7-inch durable color-infused glass and aluminum design footnote ◊ with Ceramic Shield front." +
+                            "Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else." +
+                            "48MP Main camera with 2x Telephoto captures breathtaking detail up close or far away." +
+                            "A16 Bionic powers computational photography and smooth gaming performance with great efficiency for all-day battery life." +
+                            "Connect and charge with USB-C.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -430,7 +389,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -439,56 +398,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2023, September 12\n" +
-                            "Status\tAvailable. Released 2023, September 22\n" +
-                            "BODY\tDimensions\t146.6 x 70.6 x 8.3 mm (5.77 x 2.78 x 0.33 in)\n" +
-                            "Weight\t187 g (6.60 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), titanium frame (grade 5)\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tLTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)\n" +
-                            "Size\t6.1 inches, 91.3 cm2 (~88.2% screen-to-body ratio)\n" +
-                            "Resolution\t1179 x 2556 pixels, 19.5:9 ratio (~461 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            " \tAlways-On display\n" +
-                            "PLATFORM\tOS\tiOS 17\n" +
-                            "Chipset\tApple A17 Pro (3 nm)\n" +
-                            "CPU\tHexa-core (2x3.78 GHz + 4x2.11 GHz)\n" +
-                            "GPU\tApple GPU (6-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 8GB RAM, 256GB 8GB RAM, 512GB 8GB RAM, 1TB 8GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), 1.0µm, PDAF, OIS, 3x optical zoom\n" +
-                            "12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55\", 1.4µm, dual pixel PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), 3D (spatial) video, stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@24/30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6e, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS (L1+L5), GLONASS, GALILEO, BDS, QZSS, NavIC\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tUSB Type-C 3.0, DisplayPort\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband 2 (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 3274 mAh, non-removable\n" +
-                            "Charging\tWired, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)\n" +
-                            "Reverse wired",
+                    "6.1-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island" +
+                            "Strong and light titanium design with Action button — a fast track to your favorite feature" +
+                            "48MP Main camera for super-high-resolution photos and 3x Telephoto camera" +
+                            "A17 Pro chip delivers a massive leap in graphics performance, transforming mobile gaming" +
+                            "USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -592,7 +506,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -601,56 +515,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2023, September 12\n" +
-                            "Status\tAvailable. Released 2023, September 22\n" +
-                            "BODY\tDimensions\t159.9 x 76.7 x 8.3 mm (6.30 x 3.02 x 0.33 in)\n" +
-                            "Weight\t221 g (7.80 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), titanium frame (grade 5)\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tLTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)\n" +
-                            "Size\t6.7 inches, 110.2 cm2 (~89.8% screen-to-body ratio)\n" +
-                            "Resolution\t1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            " \tAlways-On display\n" +
-                            "PLATFORM\tOS\tiOS 17\n" +
-                            "Chipset\tApple A17 Pro (3 nm)\n" +
-                            "CPU\tHexa-core (2x3.78 GHz + 4x2.11 GHz)\n" +
-                            "GPU\tApple GPU (6-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t256GB 8GB RAM, 512GB 8GB RAM, 1TB 8GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 120mm (periscope telephoto), 1.12µm, dual pixel PDAF, 3D sensor‑shift OIS, 5x optical zoom\n" +
-                            "12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55\", 1.4µm, dual pixel PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), 3D (spatial) video, stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@24/30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6e, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS (L1+L5), GLONASS, GALILEO, BDS, QZSS, NavIC\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tUSB Type-C 3.0, DisplayPort\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband 2 (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 4441 mAh, non-removable\n" +
-                            "Charging\tWired, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)\n" +
-                            "Reverse wired",
+                    "6.7-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island." +
+                            "Strong and light titanium design with Action button — a fast track to your favorite feature." +
+                            "48MP Main camera for super-high-resolution photos and 5x Telephoto camera, the longest optical zoom in iPhone ever." +
+                            "A17 Pro chip delivers a massive leap in graphics performance, transforming mobile gaming." +
+                            "USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -754,7 +623,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "Aboout phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -763,52 +632,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2022, September 07\n" +
-                            "Status\tAvailable. Released 2022, September 16\n" +
-                            "BODY\tDimensions\t146.7 x 71.5 x 7.8 mm (5.78 x 2.81 x 0.31 in)\n" +
-                            "Weight\t172 g (6.07 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), aluminum frame\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)\n" +
-                            "Resolution\t1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 16, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tDual\t12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.4, 13mm, 120˚ (ultrawide)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), Cinematic mode (4K@30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 3279 mAh, non-removable (12.68 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "6.1-inch durable design footnote ¹ with Ceramic Shield and water and dust resistance." +
+                            "All-day battery life with up to 20 hours of video playback²." +
+                            "Vital safety features like Roadside Assistance via satellite,³ Emergency SOS via satellite,³ and Crash Detection⁴." +
+                            "A Pro-level Main camera and advanced image processing for sensational shots in all kinds of light." +
+                            "A15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -912,7 +740,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -921,52 +749,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2022, September 07\n" +
-                            "Status\tAvailable. Released 2022, October 07\n" +
-                            "BODY\tDimensions\t160.8 x 78.1 x 7.8 mm (6.33 x 3.07 x 0.31 in)\n" +
-                            "Weight\t203 g (7.16 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), aluminum frame\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t6.7 inches, 109.8 cm2 (~87.4% screen-to-body ratio)\n" +
-                            "Resolution\t1284 x 2778 pixels, 19.5:9 ratio (~458 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 16, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tDual\t12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.4, 13mm, 120˚ (ultrawide)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), Cinematic mode (4K@30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 4323 mAh, non-removable (16.68 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "6.7-inch durable design footnote ¹ with Ceramic Shield and water and dust resistance." +
+                            "All-day battery life with up to 26 hours of video playback²." +
+                            "Vital safety features like Roadside Assistance via satellite,³ Emergency SOS via satellite,³ and Crash Detection⁴." +
+                            "A Pro-level Main camera and advanced image processing for sensational shots in all kinds of light." +
+                            "A15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1072,7 +859,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1081,55 +868,13 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2022, September 07\n" +
-                            "Status\tAvailable. Released 2022, September 16\n" +
-                            "BODY\tDimensions\t147.5 x 71.5 x 7.9 mm (5.81 x 2.81 x 0.31 in)\n" +
-                            "Weight\t206 g (7.27 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tLTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)\n" +
-                            "Size\t6.1 inches, 91.7 cm2 (~87.0% screen-to-body ratio)\n" +
-                            "Resolution\t1179 x 2556 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            " \tAlways-On display\n" +
-                            "PLATFORM\tOS\tiOS 16, upgradable to iOS 17\n" +
-                            "Chipset\tApple A16 Bionic (4 nm)\n" +
-                            "CPU\tHexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), 1/3.5\", 1.0µm, PDAF, OIS, 3x optical zoom\n" +
-                            "12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55\", 1.4µm, dual pixel PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS (unconfirmed)\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@24/30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS (L1+L5), GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 3200 mAh, non-removable (12.38 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "6.1‑inch (diagonal) all‑screen OLED display." +
+                            "Ceramic Shield front." +
+                            "Textured matte glass back and\n" +
+                            "stainless steel design." +
+                            "ProMotion technology with adaptive refresh rates up to 120Hz." +
+                            "Fingerprint-resistant oleophobic coating." +
+                            "Support for display of multiple languages and characters simultaneously.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1233,7 +978,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1242,55 +987,12 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2022, September 07\n" +
-                            "Status\tAvailable. Released 2022, September 16\n" +
-                            "BODY\tDimensions\t160.7 x 77.6 x 7.9 mm (6.33 x 3.06 x 0.31 in)\n" +
-                            "Weight\t240 g (8.47 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame\n" +
-                            "SIM\tNano-SIM and eSIM - International\n" +
-                            "Dual eSIM with multiple numbers - USA\n" +
-                            "Dual SIM (Nano-SIM, dual stand-by) - China\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tLTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)\n" +
-                            "Size\t6.7 inches, 110.2 cm2 (~88.3% screen-to-body ratio)\n" +
-                            "Resolution\t1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            " \tAlways-On display\n" +
-                            "PLATFORM\tOS\tiOS 16, upgradable to iOS 17\n" +
-                            "Chipset\tApple A16 Bionic (4 nm)\n" +
-                            "CPU\tHexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), 1/3.5\", 1.0µm, PDAF, OIS, 3x optical zoom\n" +
-                            "12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55\", 1.4µm, dual pixel PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR, Cinematic mode (4K@24/30fps)\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.3, A2DP, LE\n" +
-                            "Positioning\tGPS (L1+L5), GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "Emergency SOS via satellite (SMS sending/receiving)\n" +
-                            "BATTERY\tType\tLi-Ion 4323 mAh, non-removable (16.68 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                   "Ceramic Shield front" +
+                           "Textured matte glass back and\n" +
+                           "stainless steel design" +
+                           "Super Retina XDR display" +
+                           "6.7‑inch (diagonal) all‑screen OLED display" +
+                           "2796‑by‑1290-pixel resolution at 460 ppi",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1409,7 +1111,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1418,49 +1120,14 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2021, September 14\n" +
-                            "Status\tAvailable. Released 2021, September 24\n" +
-                            "BODY\tDimensions\t131.5 x 64.2 x 7.7 mm (5.18 x 2.53 x 0.30 in)\n" +
-                            "Weight\t141 g (4.97 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), aluminum frame\n" +
-                            "SIM\tNano-SIM and eSIM or Dual SIM (Nano-SIM, dual stand-by)\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t5.4 inches, 71.9 cm2 (~85.1% screen-to-body ratio)\n" +
-                            "Resolution\t1080 x 2340 pixels, 19.5:9 ratio (~476 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 15, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (4-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 4GB RAM, 256GB 4GB RAM, 512GB 4GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tDual\t12 MP, f/1.6, 26mm (wide), 1.7µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.4, 120˚, 13mm (ultrawide)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/30/60fps, 1080p@30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/2.2, 23mm (wide), 1/3.6\"\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.0, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "BATTERY\tType\tLi-Ion 2438 mAh, non-removable (9.34 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "Ceramic Shield front\n" +
+                            "Glass back and aluminum design" +
+                            "Super Retina XDR display" +
+                            "6.1‑inch (diagonal) all‑screen OLED display" +
+                            "2532‑by‑1170-pixel resolution at 460 ppi" +
+                            "A15 Bionic chip" +
+                            "Dual 12MP camera system: Main and Ultra Wide cameras" +
+                            "Cinematic mode (1080p at 30 fps)",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1579,7 +1246,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description ",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1588,49 +1255,11 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2021, September 14\n" +
-                            "Status\tAvailable. Released 2021, September 24\n" +
-                            "BODY\tDimensions\t146.7 x 71.5 x 7.7 mm (5.78 x 2.81 x 0.30 in)\n" +
-                            "Weight\t174 g (6.14 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), aluminum frame\n" +
-                            "SIM\tNano-SIM and eSIM or Dual SIM (Nano-SIM, dual stand-by)\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)\n" +
-                            "Resolution\t1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 15, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (4-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 4GB RAM, 256GB 4GB RAM, 512GB 4GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tDual\t12 MP, f/1.6, 26mm (wide), 1.7µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.4, 120˚, 13mm (ultrawide)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/30/60fps, 1080p@30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/2.2, 23mm (wide), 1/3.6\"\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.0, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "BATTERY\tType\tLi-Ion 3240 mAh, non-removable (12.41 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "6.1-inch Super Retina XDR display footnote ¹." +
+                            "Dual-camera system for incredible low-light photos and videos." +
+                            "A15 Bionic with 4-core GPU for lightning-fast performance." +
+                            "Ceramic Shield, and water and dust resistance footnote ²." +
+                            "5G for superfast downloads and high-quality streaming footnote ³.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1749,7 +1378,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1758,51 +1387,14 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2021, September 14\n" +
-                            "Status\tAvailable. Released 2021, September 24\n" +
-                            "BODY\tDimensions\t146.7 x 71.5 x 7.7 mm (5.78 x 2.81 x 0.30 in)\n" +
-                            "Weight\t204 g (7.20 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame\n" +
-                            "SIM\tNano-SIM and eSIM or Dual SIM (Nano-SIM, dual stand-by)\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)\n" +
-                            "Resolution\t1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 15, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.5\", OIS, 3x optical zoom\n" +
-                            "12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.5\", PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/30/60fps, 1080p@30/60/120/240fps, 10‑bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (1080p@30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/2.2, 23mm (wide), 1/3.6\"\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.0, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "BATTERY\tType\tLi-Ion 3095 mAh, non-removable (12.11 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "Ceramic Shield front" +
+                            "Textured matte glass back and\n" +
+                            "stainless steel design" +
+                            "Super Retina XDR display with ProMotion." +
+                            "6.1‑inch (diagonal) all‑screen OLED display " +
+                            "2532‑by‑1170-pixel resolution at 460 ppi" +
+                            "A15 Bionic chip." +
+                            "Pro 12MP camera system: Telephoto, Wide, and Ultra Wide cameras.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -1921,7 +1513,7 @@ fun ProductScreen(navController:NavHostController) {
 
             item {
                 Text(
-                    text = "About phone",
+                    text = "Description ",
                     style = MaterialTheme.typography.labelSmall,
                     modifier = Modifier.padding(top = 16.dp)
                 )
@@ -1930,52 +1522,16 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Text(
                     text =
-                    "\n" +
-                            "NETWORK\tTechnology\t\n" +
-                            "GSM / CDMA / HSPA / EVDO / LTE / 5G\n" +
-                            "LAUNCH\tAnnounced\t2021, September 14\n" +
-                            "Status\tAvailable. Released 2021, September 24\n" +
-                            "BODY\tDimensions\t160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in)\n" +
-                            "Weight\t240 g (8.47 oz)\n" +
-                            "Build\tGlass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame\n" +
-                            "SIM\tNano-SIM and eSIM or Dual SIM (Nano-SIM, dual stand-by)\n" +
-                            " \tIP68 dust/water resistant (up to 6m for 30 min)\n" +
-                            "Apple Pay (Visa, MasterCard, AMEX certified)\n" +
-                            "DISPLAY\tType\tSuper Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak)\n" +
-                            "Size\t6.7 inches, 109.8 cm2 (~87.4% screen-to-body ratio)\n" +
-                            "Resolution\t1284 x 2778 pixels, 19.5:9 ratio (~458 ppi density)\n" +
-                            "Protection\tCeramic Shield glass\n" +
-                            "PLATFORM\tOS\tiOS 15, upgradable to iOS 17\n" +
-                            "Chipset\tApple A15 Bionic (5 nm)\n" +
-                            "CPU\tHexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard)\n" +
-                            "GPU\tApple GPU (5-core graphics)\n" +
-                            "MEMORY\tCard slot\tNo\n" +
-                            "Internal\t128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM\n" +
-                            " \tNVMe\n" +
-                            "MAIN CAMERA\tTriple\t12 MP, f/1.5, 26mm (wide), 1/1.7\", 1.9µm, dual pixel PDAF, sensor-shift OIS\n" +
-                            "12 MP, f/2.8, 77mm (telephoto), PDAF, 1/3.5\", OIS, 3x optical zoom\n" +
-                            "12 MP, f/1.8, 13mm, 120˚ (ultrawide), 1/3.5\", PDAF\n" +
-                            "TOF 3D LiDAR scanner (depth)\n" +
-                            "Features\tDual-LED dual-tone flash, HDR (photo/panorama)\n" +
-                            "Video\t4K@24/30/60fps, 1080p@30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (1080p@30fps), stereo sound rec.\n" +
-                            "SELFIE CAMERA\tSingle\t12 MP, f/2.2, 23mm (wide), 1/3.6\"\n" +
-                            "SL 3D, (depth/biometrics sensor)\n" +
-                            "Features\tHDR\n" +
-                            "Video\t4K@24/25/30/60fps, 1080p@30/60/120fps, gyro-EIS\n" +
-                            "SOUND\tLoudspeaker\tYes, with stereo speakers\n" +
-                            "3.5mm jack\tNo\n" +
-                            "COMMS\tWLAN\tWi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot\n" +
-                            "Bluetooth\t5.0, A2DP, LE\n" +
-                            "Positioning\tGPS, GLONASS, GALILEO, BDS, QZSS\n" +
-                            "NFC\tYes\n" +
-                            "Radio\tNo\n" +
-                            "USB\tLightning, USB 2.0\n" +
-                            "FEATURES\tSensors\tFace ID, accelerometer, gyro, proximity, compass, barometer\n" +
-                            " \tUltra Wideband (UWB) support\n" +
-                            "BATTERY\tType\tLi-Ion 4352 mAh, non-removable (16.75 Wh)\n" +
-                            "Charging\tWired, PD2.0, 50% in 30 min (advertised)\n" +
-                            "15W wireless (MagSafe)\n" +
-                            "7.5W wireless (Qi)",
+                    "Ceramic Shield front." +
+                            "Textured matte glass back and\n" +
+                            "stainless steel design." +
+                            "Super Retina XDR display with ProMotion." +
+                            "6.7‑inch (diagonal) all‑screen OLED display\n" +
+                            "2778‑by‑1284-pixel resolution at 458 ppi" +
+                            "ProMotion technology with adaptive refresh rates up to 120Hz." +
+                            "A15 Bionic chip." +
+                            "Pro 12MP camera system: Telephoto, Wide, and Ultra Wide cameras." +
+                            "Enabled by TrueDepth camera for facial recognition\n",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )

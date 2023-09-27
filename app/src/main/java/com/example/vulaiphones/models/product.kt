@@ -25,12 +25,24 @@ class Product {
  data class Order(
      val productId: Product,
      val productName: String,
-     val quantity: Int,
+     val quantity: String,
      val totalPrice: Double,
      val customerName: String,
      val Email: String,
-     val Name: String,
-     val imageResourceId: Int=0 // Add this property to store the image resource ID
-
+//     val Name: String,
+     val imageResourceId: Int=0, // Add this property to store the image resource ID
+     val product: Product,
+     val name: String,
+     val cardNumber: Long,
+     val expirationDate: Long,
+     val cvv: Long
      // Add other order details as needed
 )
+//data class Product(val id: Int, val name: String, val price: Double)
+
+class MyCheckout {
+    fun checkout(product: Product, name: String, cardNumber: Long, expirationDate: Long, cvv: Int) {
+        // Your code to process the checkout goes here
+    }
+}
+
