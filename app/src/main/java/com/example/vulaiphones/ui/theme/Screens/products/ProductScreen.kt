@@ -61,7 +61,7 @@ fun ProductScreen(navController:NavHostController) {
         ) {
             item {
                 Image(
-                    painter = painterResource(id = R.drawable.i152),
+                    painter = painterResource(id = R.drawable.i153),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -126,11 +126,11 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
                         Text(
                             text = "-",
-                            color = Color.Black,
+                            color = Color.White,
                             style = TextStyle(fontSize = 20.sp)
                         )
                     }
@@ -139,11 +139,11 @@ fun ProductScreen(navController:NavHostController) {
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
                         Text(
                             text = "+",
-                            color = Color.Black,
+                            color = Color.White,
                             style = TextStyle(fontSize = 20.sp),
                             fontWeight = FontWeight.Bold,
                             )
@@ -151,20 +151,7 @@ fun ProductScreen(navController:NavHostController) {
                 }
             }
 
-//            item {
-//                Button(
-//                    onClick = {
-//                        // Handle Add to Cart button click
-//                        navController.navigate(ROUTE_LOGIN)
 //
-//                    },
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp)
-//                ) {
-//                    Text(text = "Add to Cart")
-//                }
-//            }
 
             item {
                 Text(
@@ -268,18 +255,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -384,18 +379,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -501,18 +504,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -618,18 +629,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -735,18 +754,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -852,18 +879,24 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp))
                     }
                 }
             }
@@ -973,18 +1006,26 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
@@ -1091,36 +1132,31 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
 
-//            item {
-//                Button(
-//                    onClick = {
-//                        // Handle Add to Cart button click
-//                        navController.navigate(ROUTE_LOGIN)
 //
-//                    },
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp)
-//                ) {
-//                    Text(text = "Add to Cart")
-//                }
-//            }
 
             item {
                 Text(
@@ -1226,36 +1262,30 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
 
-//            item {
-//                Button(
-//                    onClick = {
-//                        // Handle Add to Cart button click
-//                        navController.navigate(ROUTE_LOGIN)
-//
-//                    },
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp)
-//                ) {
-//                    Text(text = "Add to Cart")
-//                }
-//            }
 
             item {
                 Text(
@@ -1358,36 +1388,31 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
 
-//            item {
-//                Button(
-//                    onClick = {
-//                        // Handle Add to Cart button click
-//                        navController.navigate(ROUTE_LOGIN)
-//
-//                    },
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp)
-//                ) {
-//                    Text(text = "Add to Cart")
-//                }
-//            }
+
 
             item {
                 Text(
@@ -1493,36 +1518,30 @@ fun ProductScreen(navController:NavHostController) {
                                 quantity--
                             }
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("-")
+                        Text(
+                            text = "-",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
 
                     Button(
                         onClick = {
                             quantity++
                         },
-                        modifier = Modifier.size(30.dp),
+//                        modifier = Modifier.size(30.dp),
                     ) {
-                        Text("+")
+                        Text(
+                            text = "+",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp)
+                        )
                     }
                 }
             }
 
-//            item {
-//                Button(
-//                    onClick = {
-//                        // Handle Add to Cart button click
-//                        navController.navigate(ROUTE_LOGIN)
-//
-//                    },
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp)
-//                ) {
-//                    Text(text = "Add to Cart")
-//                }
-//            }
 
             item {
                 Text(
