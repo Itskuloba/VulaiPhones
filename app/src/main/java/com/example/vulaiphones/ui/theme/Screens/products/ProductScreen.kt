@@ -108,7 +108,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -176,7 +175,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
 
                     },
@@ -237,7 +235,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -301,7 +298,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -361,7 +357,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -486,7 +481,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -551,7 +545,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -611,7 +604,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -676,7 +668,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -736,7 +727,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -801,7 +791,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -861,7 +850,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -928,7 +916,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -988,7 +975,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -1054,7 +1040,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -1114,7 +1099,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -1184,7 +1168,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -1244,7 +1227,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -1310,7 +1292,6 @@ fun ProductScreen(navController:NavHostController) {
             item {
                 Button(
                     onClick = {
-                        // Handle Add to Cart button click
                         navController.navigate(ROUTE_CHECKOUT)
                     },
                     modifier = Modifier
@@ -1370,7 +1351,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(
@@ -1500,7 +1480,6 @@ fun ProductScreen(navController:NavHostController) {
                         },
                         keyboardActions = KeyboardActions(
                             onDone = {
-                                // Handle keyboard done action
                             }
                         ),
                         keyboardOptions = KeyboardOptions(

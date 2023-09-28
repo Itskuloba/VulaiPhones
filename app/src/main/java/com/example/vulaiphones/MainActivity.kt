@@ -68,25 +68,7 @@ class MainActivity : ComponentActivity() {
 
     }
 
-//@Composable
-//fun Navigation() {
-//    val navController = rememberNavController()
-//    NavHost(navController = navController,
-//        startDestination = ROUTE_SPLASHSCREEN) {
-//        composable(ROUTE_SPLASHSCREEN) {
-//            SplashScreen(navController = navController)
-//        }
-////        val db = Firebase.firestore
-//
-//        // Main Screen
-//        composable(ROUTE_PRODUCTLISTING) {
-//            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-//                Text(text = "Main Screen", color = Color.Black, fontSize = 24.sp)
-//                Text(text = "Main Screen", color = Color.Black, fontSize = 24.sp)
-//            }
-//        }
-//    }
-//}
+
 
 @Composable
 fun FirebasUI(context: Context) {

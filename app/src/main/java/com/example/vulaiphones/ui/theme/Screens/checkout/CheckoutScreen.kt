@@ -36,12 +36,10 @@ import com.example.vulaiphones.ui.theme.VulaiPhonesTheme
 fun CheckoutScreen(
     navController: NavHostController,
 ) {
-//    val viewModel: ViewModel = viewModel() // Initialize your ViewModel instance outside of the composable function
 
-    val context = LocalContext.current // Use LocalContext to get the current context
+    val context = LocalContext.current
 
-    // Create a sample Product instance
-    val product = Product(/* Initialize your product data here */)
+    val product = Product()
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var cardNumber by remember { mutableStateOf("") }
@@ -70,7 +68,7 @@ fun CheckoutScreen(
 
         TextField(
             value = name,
-            onValueChange = { it -> name = it }, // Update name variable
+            onValueChange = { it -> name = it },
             placeholder = { Text("Name") },
             modifier = Modifier
                 .fillMaxWidth()
@@ -82,7 +80,7 @@ fun CheckoutScreen(
 
         TextField(
             value = email,
-            onValueChange = { it -> email = it }, // Update email variable
+            onValueChange = { it -> email = it },
             placeholder = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth()
@@ -99,7 +97,7 @@ fun CheckoutScreen(
 
         TextField(
             value = cardNumber,
-            onValueChange = { it -> cardNumber = it }, // Update email variable
+            onValueChange = { it -> cardNumber = it },
             placeholder = { Text("Card Number") },
             modifier = Modifier
                 .fillMaxWidth()
@@ -112,7 +110,7 @@ fun CheckoutScreen(
         ) {
             TextField(
                 value = expirationDate,
-                onValueChange = { it -> expirationDate = it }, // Update email variable
+                onValueChange = { it -> expirationDate = it },
                 placeholder = { Text("MM/YY") },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -121,7 +119,7 @@ fun CheckoutScreen(
 
             TextField(
                 value = cvv,
-                onValueChange = { it -> cvv = it }, // Update email variable
+                onValueChange = { it -> cvv = it },
                 placeholder = { Text("CVV") },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -131,23 +129,16 @@ fun CheckoutScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Order Confirmation Button
 
         val myCheckout = AuthViewModel(navController, context)
 
         Button(
             onClick = {
                 val product = Product()
-//                val myCheckout = MyCheckout()
-//                myCheckout.checkout(product, "John Doe", 1234567890123456L, 20250101L, 123)
-//                val myCheckout = AuthViewModel(navController, context)
+
                 myCheckout.checkout(product, "John Doe", 1234567890123456L, 20250101L, 123)
 
-//                myCheckout.checkout(product: Product, name:String,cardNumber: Number,expirationDate:Number,cvv:Number)
-//                myCheckout.checkout(product)
 
-
-                // Handle order confirmation logic here
             },
             modifier = Modifier
                 .fillMaxWidth()
@@ -163,7 +154,6 @@ fun CheckoutScreen(
                 order?.let { mysaveOrder.saveOrder(it) }
 
 
-                // Handle order confirmation logic here
             },
             modifier = Modifier
                 .fillMaxWidth()
@@ -175,7 +165,6 @@ fun CheckoutScreen(
         Button(
             onClick = {
                 navController.navigate(ROUTE_PRODUCT)
-                // Handle order confirmation logic here
             },
             modifier = Modifier
                 .fillMaxWidth()
